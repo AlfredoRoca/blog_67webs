@@ -4,9 +4,8 @@ lock '3.4.0'
 set :application, 'blog_67webs'
 set :repo_url, 'git@github.com:AlfredoRoca/blog_67webs.git'
 set :deploy_via, :remote_cache
-set :rake_env, 'staging'
+set :stages, %w(staging production) 
 set :default_stage, 'staging'
-set :stage, 'staging'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
