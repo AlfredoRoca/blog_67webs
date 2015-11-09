@@ -1,0 +1,16 @@
+- if page.date
+  %footer
+    %p.meta
+      Publicado
+      - if page.date
+        el
+        %time(datetime="#{page.date.to_s}" pubdate=true)= format_date_to_short(page.date)
+      - if (! page.categories.empty?)
+        en
+        - page.categories.each do |category|
+          - if category != page.categories[-1]
+            = succeed ',' do
+              %a(href="#{path_to(category.abspath)}")= category.link_text
+          - else
+            %a(href="#{path_to(category.abspath)}")= category.link_text
+

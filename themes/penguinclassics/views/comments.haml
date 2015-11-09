@@ -1,0 +1,21 @@
+%script{:type=>"text/javascript"}
+  (function() {
+  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+  po.src = 'https://apis.google.com/js/plusone.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+
+.post
+  .content
+    .wrapper
+      .social
+        %script{:type=>"text/javascript", :src => "http://tweetmeme.com/i/scripts/button.js"}
+        %g:plusone{:annotation => "inline"}
+      - if short_name = Nesta::Config.disqus_short_name
+        #disqus_thread
+          - if Sinatra::Application.environment == :development
+            %script{ :type => "text/javascript" }
+              var disqus_developer = true;
+          %script{ :type => "text/javascript", :src => "http://disqus.com/forums/#{short_name}/embed.js" }
+          %noscript
+            %a{ :href => "http://disqus.com/forums/#{short_name}/?url=ref" } View comments.

@@ -1,0 +1,13 @@
+%div{:class => "post text"}
+  .content
+    .wrapper
+      .description
+        ~ @page.to_html(self)
+    - unless @page.articles.empty?
+      .wrapper
+        .description
+          %section.articles
+            %header
+              %h1= articles_heading
+            = article_summaries(@page.articles)
+    = haml :comments, :layout => false

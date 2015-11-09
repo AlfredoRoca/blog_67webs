@@ -1,0 +1,6 @@
+- if ! @menu_items.empty?
+  %ul.categories
+    - @menu_items.each do |page|
+      %li.category
+        %a{ :href => page.abspath }
+        / %a{ :href => page.abspath }= page.heading

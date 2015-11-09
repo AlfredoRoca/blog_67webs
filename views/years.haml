@@ -1,0 +1,6 @@
+%nav.archive
+  %h1 Artículos por año
+  %ol
+    - article_years.each do |year|
+      %li
+      %a{ :href => "/archives##{year}" }= year
