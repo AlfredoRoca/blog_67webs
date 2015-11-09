@@ -4,3 +4,11 @@ set :use_sudo, false
 set :rvm_ruby_version, '2.2.0@blog_67webs'
 set :rake_env, 'staging'
 set :rails_env, 'staging'
+
+set :default_environment, {
+  'PATH' => "$PATH",
+  'RUBY_VERSION' => 'ruby 2.2.0',
+  'GEM_HOME'     => '/home/alfredo/.rvm/gems/ruby-2.2.0',
+  'GEM_PATH'     => '/home/alfredo/.rvm/gems/ruby-2.2.0',
+  'BUNDLE_PATH'  => '/home/alfredo/.rvm/gems/ruby-2.2.0'  # If you are using bundler.
+}
