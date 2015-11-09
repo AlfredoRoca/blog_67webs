@@ -1,6 +1,6 @@
 Link text: Acerca de
 
-# Sobre este sitio y su autor
+#Sobre este sitio y su autor
 
 Una de las grandes lecciones que he aprendido ya de adulto es que es necesario fijar un objetivo, dejar a un lado aquello que no este alineado con él y concentrar todos los esfuerzos para alcanzarlo.
 
@@ -10,5 +10,5 @@ Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootca
 
 Este blog viene a ser la manera en que intentaré este propósito.
 
-Si crees que puedo colaborar en tu trabajo o resolver algún problema no dudes en ponerte en contacto conmigo en la dirección <mailto:alfredo.roca.mas@gmail.com>
+Si crees que puedo colaborar en tu trabajo o resolver algún problema no dudes en ponerte en contacto conmigo en la dirección <mailto:alfredo.roca.mas@gmail.com>, en [LinkedIn](https://es.linkedin.com/in/alfredorocamas) o [Twitter](https://twitter.com/AlfredoRocaMas)
 
