@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'blog_67webs'
 set :repo_url, 'git@github.com:AlfredoRoca/blog_67webs.git'
-set :deploy_via, :remote_cache
+set :deploy_via, :copy #:remote_cache
 set :stages, %w(staging) 
 set :default_stage, 'staging'
 

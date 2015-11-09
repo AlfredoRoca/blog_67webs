@@ -8,7 +8,7 @@ set :rails_env, 'staging'
 set :default_environment, {
   'PATH' => "$PATH",
   'RUBY_VERSION' => 'ruby 2.2.0',
-  'GEM_HOME'     => '/home/alfredo/.rvm/gems/ruby-2.2.0',
-  'GEM_PATH'     => '/home/alfredo/.rvm/gems/ruby-2.2.0',
-  'BUNDLE_PATH'  => '/home/alfredo/.rvm/gems/ruby-2.2.0'  # If you are using bundler.
+  'GEM_HOME'     => '/home/deployer/.rvm/gems/ruby-2.2.0',
+  'GEM_PATH'     => '/home/deployer/.rvm/gems/ruby-2.2.0',
+  'BUNDLE_PATH'  => '/home/deployer/.rvm/gems/ruby-2.2.0'  # If you are using bundler.
 }
