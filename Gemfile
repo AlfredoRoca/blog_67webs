@@ -4,8 +4,8 @@ gem 'nesta'
 
 group :development do
   gem 'mr-sparkle'
-  gem 'capistrano'
-  gem "capistrano-rvm"
+  gem "capistrano", '~> 3.4.0'
+  gem "capistrano-rvm", '~> 0.1.2'
 end
 
 # gem 'debugger'

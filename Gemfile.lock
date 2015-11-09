@@ -83,8 +83,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
-  capistrano-rvm
+  capistrano (~> 3.4.0)
+  capistrano-rvm (~> 0.1.2)
   coderay
   mr-sparkle
   nesta
