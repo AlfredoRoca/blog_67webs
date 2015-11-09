@@ -35,6 +35,12 @@ module Nesta
         date.strftime("%d/%m/%Y")
       end
 
+      # lib/nesta/helpers.rb
+      def articles_heading
+        @page.metadata('Articles heading') || "Artículos en #{@page.heading}"
+      end
+
+
     end
   end
 end

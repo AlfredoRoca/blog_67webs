@@ -19,5 +19,4 @@ Por eso, escribo en castellano, para intentar llenar un vacío con mi modesta ap
 
 En este viaje cósmico he ido recogiendo mis hallazgos en un diario que ahora vengo a compartir.
 
-Mi primer post será precisamente [como he creado mi colección de recetas.](#)
-
+Puedes contactarme por mail en la dirección <mailto:alfredo.roca.mas@gmail.com>

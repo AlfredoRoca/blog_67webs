@@ -7,7 +7,7 @@ set :deploy_via, :copy #:remote_cache
 set :stages, %w(staging) 
 set :default_stage, 'staging'
 
-
+set :tmp_dir, "/home/deployer/tmp"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
