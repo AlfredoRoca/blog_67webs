@@ -4,17 +4,12 @@ lock '3.4.0'
 set :application, 'blog_67webs'
 set :repo_url, 'git@github.com:AlfredoRoca/blog_67webs.git'
 set :deploy_via, :remote_cache
-
-server '67.205.57.114', user: 'alfredo', roles: %w{web app}, primary: true, port: 53100
-set :deploy_to, '/home/alfredo/rails_apps/blog_67webs'
-set :use_sudo, false
-set :rvm_ruby_version, '2.2.0@blog_67webs'
+set :rake_env, 'staging'
+set :default_stage, 'staging'
+set :stage, 'staging'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
-# Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
 
 # Default value for :scm is :git
 set :scm, :git
