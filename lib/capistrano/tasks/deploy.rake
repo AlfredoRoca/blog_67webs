@@ -6,7 +6,7 @@ namespace :deploy do
       on roles(:app) do
         # DreamHost shk-1
         within "#{current_path}" do
-          execute "~/.rvm/wrappers/default/thin #{command} -C /etc/thin/blog_67webs.yml"
+          execute "~/.rvm/wrappers/ruby-2.2.0@blog_67webs/thin #{command} -C /etc/thin/blog_67webs.yml"
         end
       end
     end

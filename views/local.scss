@@ -11,4 +11,18 @@ nav.archive ol {
     list-style: none;
 }
 
+.header-image {
+  background-image: url("/images/cabecera_5.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 250px;
+  width: 100%;
+}
 
+hgroup {
+  padding-top: 1em;
+  h1 { color: black; }
+  h2 { color: white; font-style: italic; }
+}

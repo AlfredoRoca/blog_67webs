@@ -2,21 +2,13 @@ Link text: Acerca de
 
 # Sobre este sitio y su autor
 
+Una de las grandes lecciones que he aprendido ya de adulto es que es necesario fijar un objetivo, dejar a un lado aquello que no este alineado con él y concentrar todos los esfuerzos para alcanzarlo.
 
-Internet es muy grande. Es como el universo. Lleno de galaxias que son muy grandes.
+El vasto campo del desarrollo web hace patente la aplicación de dicha lección.
 
-Tenemos la galaxia de *Google* con gusanos hacia otras galaxias o *Wikipedia*. Muchos planetas tiene su propio servicio de información, y para los programadores tenemos *Stackoverflow*.
+Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootcamp de [Ironhack](http://ironhack.com), un proyecto completo como [SharingKitchN](http://sharingkitchn.com) y mucha lectura de [StackOverflow](http://stackoverflow.com/) y numerosos blogs ha llegado el momento de materializar mi aprendizaje y empezar a contribuir por lo que he recibido.
 
-En mi viaje interestelar que comenzó hace algo mas de un año he visitado muchos planetas.
+Este blog viene a ser la manera en que intentaré este propósito.
 
-El viaje se ha hecho más fácil gracias a *Stackoverflow* que recogen infinitas aportaciones al conocimiento. Su visita constante es fundamental para la buena salud del programador.
+Si crees que puedo colaborar en tu trabajo o resolver algún problema no dudes en ponerte en contacto conmigo en la dirección <mailto:alfredo.roca.mas@gmail.com>
 
-Yo mismo he podido hacer alguna aportación y por ello me han dado unas medallas ------aqui incluir imagen captura puntos stackoverflow -----
-
-Al pricipio buscaba en castellano pero acabé pasándome al inglés para encontrar las soluciones que necesitaba.
-
-Por eso, escribo en castellano, para intentar llenar un vacío con mi modesta aportación. Y en inglés como gratitud por lo que el universo me ha ayudado.
-
-En este viaje cósmico he ido recogiendo mis hallazgos en un diario que ahora vengo a compartir.
-
-Puedes contactarme por mail en la dirección <mailto:alfredo.roca.mas@gmail.com>

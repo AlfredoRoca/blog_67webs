@@ -1,257 +1,270 @@
-@import "mixins.sass"
-@import "normalize"
-@import "github_code_highlighter"
+@import mixins.sass
+@import normalize
+@import github_code_highlighter
 
 body
-  font: $size1 "Roboto Slab", serif
-  line-height: 1.6
-  color: $base-color
+    font: $size1 "Roboto Slab", serif
+    line-height: 1.6
+    color: $base-color
 
 div#container
-  position: relative
-  margin: 0 1em
+    position: relative
+    margin: 0 1em
 
 header[role=banner]
-  h1,
-  h2
-    margin: 0
-    font-weight: normal
+    h1,
+    h2
+        margin: 0
+        font-weight: normal
 
-  h1
-    margin-top: 0.5em
-    font-size: $size2
+    h1
+        margin-top: 0.5em
+        font-size: $size2
 
-  h2
-    color: $meta-color
-    font-size: $size0
+    h2
+        color: $meta-color
+        font-size: $size0
 
 footer.branding
-  padding-top: 2em
+    padding-top: 2em
 
 +respond-to(medium-screens)
-  div#container
-    margin: 0 auto
-    max-width: $measure
+    div#container
+        margin: 0 auto
+        max-width: $measure
+
 
 +respond-to(wide-screens)
-  div#container
-    max-width: $full-page-width
+    div#container
+        max-width: $full-page-width
 
-  div#content
-    float: left
-    width: 37em
+    div#content
+        float: left
+        width: 37em
 
-  div#sidebar
-    float: right
-    width: $sidebar-width
+    div#sidebar
+        float: right
+        width: $sidebar-width
 
-  footer.branding
-    clear: both
+    footer.branding
+        clear: both
+
 
 h1, h2, h3, h4
-  margin: 1em 0 0.5em
+    margin: 1em 0 0.5em
 
 h1
-  font-size: $size4
+    font-size: $size4
+
 h2
-  font-size: $size3
+    font-size: $size3
+
 h3
-  font-size: $size2
+    font-size: $size2
+
 h4
-  font-size: $size2
+    font-size: $size2
 
 ol,
 p,
 pre,
 ul
-  margin: 0 0 $vertical-margin
+    margin: 0 0 $vertical-margin
 
 li
-  margin: 0
+    margin: 0
 
 blockquote
-  margin: $vertical-margin 0
-  padding: 0 $vertical-margin / 2
-  border-left: 5px solid $tint
-  
-  font-style: italic
-  color: $base-color + #555
-  
+    margin: $vertical-margin 0
+    padding: 0 ($vertical-margin / 2)
+    border-left: 5px solid $tint
+    font-style: italic
+    color: $base-color + #555
+
 pre
-  display: block
-  width: auto
+    display: block
+    width: auto
+    padding: 0.5em
+    font-size: $size0
+    overflow: auto
+    white-space: pre
 
-  padding: 0.5em
-
-  font-size: $size0
-
-  overflow: auto
-  white-space: pre
-
-  code
-    font-size: 1em
+    code
+        font-size: 1em
 
 code
-  font-size: $size0
+    font-size: $size0
 
 img
-  border: none
+    border: none
 
 nav.breadcrumb
-  margin-top: $vertical-margin
-  color: $meta-color
+    margin-top: $vertical-margin
+    color: $meta-color
+    font-size: 0.909em
 
-  font-size: 0.909em
-
-  ul
-    margin: 0
-    padding: 0
-
-  li
-    display: inline
-    list-style: none
-
-    &::before
-      content: " > "
-
-    &:last-child
-      display: block
-      margin-left: 1em
-
-      +respond-to(medium-screens)
-        display: inline
+    ul
         margin: 0
+        padding: 0
 
-    &:first-child
-      margin-left: 0
+    li
+        display: inline
+        list-style: none
+
+        &::before
+            content: " > "
+
+        &:last-child
+            display: block
+            margin-left: 1em
+
+            +respond-to(medium-screens)
+                display: inline
+                margin: 0
+
+        &:first-child
+            margin-left: 0
 
 a
-  color: $link-color
-  +transition(color 0.25s 0 ease)
-  &:visited
-    color: $visited-link-color
-  &:hover
-    color: $hover-link-color
-  &:active
-    color: $active-link-color
+    color: $link-color
+
+    +transition(color 0.25s 0 ease)
+
+    &:visited
+        color: $visited-link-color
+
+    &:hover
+        color: $hover-link-color
+
+    &:active
+        color: $active-link-color
 
 nav.breadcrumb,
 nav.categories,
-div.feed,
+div.feed, 
+div.about,
+.archive ol,
 article p.meta
-  a
-    color: $nav-link-color
-  &:hover a
-    color: $link-color
-  a:hover
-    color: $hover-link-color
+    a
+        color: $nav-link-color
+
+    &:hover a
+        color: $link-color
+
+    a:hover
+        color: $hover-link-color
 
 article
-  img
-    max-width: 100%
+    img
+        max-width: 100%
 
-  footer
-    p.meta
-      font-style: italic
-      color: $meta-color
+    footer
+        p.meta
+            font-style: italic
+            color: $meta-color
 
 // Pages of content
 article[role="main"]
-  & > h1
-    font-weight: normal
+    & > h1
+        font-weight: normal
 
-  div#disqus_thread
-    img
-      max-width: none
-    ul#dsq-comments
-      margin-left: 0
-  
+    div#disqus_thread
+        img
+            max-width: none
+
+        ul#dsq-comments
+            margin-left: 0
+
 // Pages/articles assigned to this page
 section.pages,
 section.articles
-  & > ol
-    margin-left: 0
-    padding-left: 0
-    li
-      position: relative
-      list-style: none
+    & > ol
+        margin-left: 0
+        padding-left: 0
+
+        li
+            position: relative
+            list-style: none
+
+        article
+            h1
+                margin-bottom: 0.2em
+                font-size: $size3
+                font-weight: normal
+
+            ol li
+                list-style: decimal
+
+            ul li
+                list-style: disc
+
+    header h1
+        font-size: $size3
 
     article
-      h1
-        margin-bottom: 0.2em
+        h1
+            a
+                text-decoration: none
 
-        font-size: $size3
-        font-weight: normal
-      ol li
-        list-style: decimal
-      ul li
-        list-style: disc
+        p.read_more
+            font-size: $size1
+            margin: (-1em) 0 0 0
 
-  header h1
-    font-size: $size3
-
-  article
-    h1
-      a
-        text-decoration: none
-    p.read_more
-      font-size: $size1
-      margin: -1em 0 0 0
-    footer
-      border-top: none
-
-      font-size: $size0
+        footer
+            border-top: none
+            font-size: $size0
 
 section.articles
-  border-top: 2px solid $tint
+    border-top: 2px solid $tint
 
-  &:first-child
-    border-top: none
+    &:first-child
+        border-top: none
 
-  & > header h1
-    color: $meta-color
-    font-weight: normal
+    & > header h1
+        color: $meta-color
+        font-weight: normal
 
 div#sidebar
-  border-top: 2px solid $tint
-
-  h1
-    font-size: $size3
-
-  ol, ul
-    padding-left: 0
-    list-style: none
-
-    li
-      display: inline
-
-      &::after
-        content: ' / '
-      &:last-child
-        &::after
-          content: ''
-
-  +respond-to(medium-screens)
-    margin-top: 1.4em
-
-    p
-      font-size: $size0
-
-  +respond-to(wide-screens)
-    border-top: none
-
-    color: $meta-color
+    border-top: 2px solid $tint
 
     h1
-      font-size: $size2
-      font-weight: normal
+        font-size: $size3
 
     ol, ul
-      li
-        display: list-item
+        padding-left: 0
+        list-style: none
 
-        &::after
-          content: ''
+        li
+            display: inline
+
+            &::after
+                content: " / "
+
+            &:last-child
+                &::after
+                    content: ""
+
+    +respond-to(medium-screens)
+        margin-top: 1.4em
+
+        p
+            font-size: $size0
+
+
+    +respond-to(wide-screens)
+        border-top: none
+        color: $meta-color
+
+        h1
+            font-size: $size2
+            font-weight: normal
+
+        ol, ul
+            li
+                display: list-item
+
+                &::after
+                    content: ""
 
 div.feed
-  margin: $vertical-margin 0
+    margin: $vertical-margin 0
