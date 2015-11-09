@@ -19,3 +19,6 @@ gem "rack-codehighlighter", :require => "rack/codehighlighter"
 # the rest of the article
 gem "nesta-plugin-foldable"
 
+# app server
+gem 'thin'
+
