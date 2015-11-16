@@ -12,3 +12,5 @@ Este blog viene a ser la manera en que intentaré este propósito.
 
 Si crees que puedo colaborar en tu trabajo o resolver algún problema no dudes en ponerte en contacto conmigo en la dirección <mailto:alfredo.roca.mas@gmail.com>, en [LinkedIn](https://es.linkedin.com/in/alfredorocamas) o [Twitter](https://twitter.com/AlfredoRocaMas)
 
+<67webs.com>
+
