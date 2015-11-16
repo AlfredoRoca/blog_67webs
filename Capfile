@@ -24,6 +24,7 @@ require 'capistrano/deploy'
 # require 'capistrano/passenger'
 
 require 'capistrano/rvm'
+require 'rvm1/capistrano3'
 
 require 'capistrano/sitemap_generator' 
 # to refresh sitemap in production

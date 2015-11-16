@@ -4,11 +4,12 @@ set :use_sudo, false
 set :rvm_ruby_version, '2.2.0@blog_67webs'
 set :rake_env, 'staging'
 set :rails_env, 'staging'
+set :deploy_user, 'deployer'
 
 set :default_environment, {
   'PATH' => "$PATH",
   'RUBY_VERSION' => 'ruby 2.2.0',
-  'GEM_HOME'     => '/home/deployer/.rvm/gems/ruby-2.2.0',
-  'GEM_PATH'     => '/home/deployer/.rvm/gems/ruby-2.2.0',
-  'BUNDLE_PATH'  => '/home/deployer/.rvm/gems/ruby-2.2.0'  # If you are using bundler.
+  'GEM_HOME'     => '/home/deployer/.rvm/gems/ruby-2.2.0@blog_67webs',
+  'GEM_PATH'     => '/home/deployer/.rvm/gems/ruby-2.2.0@blog_67webs',
+  'BUNDLE_PATH'  => '/home/deployer/.rvm/gems/ruby-2.2.0@blog_67webs'  # If you are using bundler.
 }
