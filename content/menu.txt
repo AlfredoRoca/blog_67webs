@@ -4,3 +4,4 @@ rails
 css
 pry
 nesta
+nginx
