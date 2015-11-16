@@ -1,7 +1,7 @@
 Description: Cómo incluir un documento o texto largo en tu aplicación Rails
 Date: 6/11/2015
 Categories: rails
-Summary: Si necesitas incluir documentos o textos documentos como los "Términos y condiciones" y además en varios idiomas, usar markdown puede facilitarte la vida.
+Summary: Si necesitas incluir documentos o textos largos como los "Términos y condiciones" y además en varios idiomas, usar markdown puede facilitarte la vida.
 Keywords: rails, documentos largos
 
 #Cómo incluir un texto largo en tu aplicación Rails
