@@ -33,7 +33,7 @@ popup_con_mensaje.html.erb
 
 En la acción del controlador que debe abrir el popup
 
-  render :popup_con_mensaje
+    render :popup_con_mensaje
 
 
 En bootstrap-sprockets.js
