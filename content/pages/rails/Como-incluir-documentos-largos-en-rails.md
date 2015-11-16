@@ -8,7 +8,7 @@ Keywords: rails, documentos largos
 
 Fuente: <https://www.codefellows.org/blog/how-to-create-a-markdown-friendly-blog-in-a-rails-app>
 
-##Cómo incluir un documento, por ejemplo, los términos y condiciones.
+##Cómo incluir un documento, por ejemplo, el clásico "Términos y condiciones".
 Una posible solución es usar el lenguaje Markdown y la gem 'redcarpet'
 
 Añadir redcarpet al Gemfile
@@ -41,3 +41,4 @@ En la vista
     :::ruby
     <%= markdown(texto) %>
 
+Pendiente: anotar el código para cargar el fichero de texto.

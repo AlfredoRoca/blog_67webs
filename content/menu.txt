@@ -5,3 +5,4 @@ css
 pry
 nesta
 nginx
+git

@@ -10,7 +10,7 @@ Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootca
 
 Este blog viene a ser la manera en que intentaré este propósito.
 
-Si crees que puedo colaborar en tu trabajo o resolver algún problema no dudes en ponerte en contacto conmigo en la dirección <mailto:alfredo.roca.mas@gmail.com>, en [LinkedIn](https://es.linkedin.com/in/alfredorocamas) o [Twitter](https://twitter.com/AlfredoRocaMas)
+Si crees que puedo colaborar en tu trabajo o resolver algún problema no dudes en ponerte en contacto conmigo en la dirección <mailto:67webs@gmail.com>, en [LinkedIn](https://es.linkedin.com/in/alfredorocamas) o [Twitter](https://twitter.com/AlfredoRocaMas)
 
-<67webs.com>
+[Mi portafolio en 67webs.com](http://67webs.com)
 
