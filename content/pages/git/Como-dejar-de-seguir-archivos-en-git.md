@@ -1,8 +1,8 @@
 Description: Como dejar de seguir archivos en git (untrack)
 Date: 13/7/2015
 Categories: git
-Summary: 
-Keywords: git, untrack 
+Summary: Git es muy potente. Aquí tienes cómo dejar de seguir archivos sin borrarlos del repositorio
+Keywords: git, untrack, update-index 
 
 #Como dejar de seguir archivos en git (untrack)
 
