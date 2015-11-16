@@ -3,6 +3,8 @@ Date: 15/11/2015
 Categories: nginx, rails
 Summary: Servir los assets y los uploads de rails mediante nginx
 
+#Configurar nginx para servir ficheros rails
+
 Lo que he hecho yo es lo siguiente:
 
 production.rb
