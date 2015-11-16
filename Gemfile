@@ -23,6 +23,3 @@ gem "nesta-plugin-foldable"
 # app server
 gem 'thin'
 
-# https://github.com/kjvarga/sitemap_generator
-# to refresh sitemap in production execute -> cap production deploy:sitemap:create 
-gem 'sitemap_generator'

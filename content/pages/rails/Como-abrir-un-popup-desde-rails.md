@@ -11,7 +11,7 @@ En la vista donde se quiere que aparezca el popup
     <%= render 'popup_con_mensaje' %>
 
 
-popup_con_mensaje.html.erb
+_popup_con_mensaje.html.erb
 
     <!-- Modal -->
     <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

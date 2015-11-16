@@ -40,7 +40,6 @@ module Nesta
         @page.metadata('Articles heading') || "Artículos en #{@page.heading}"
       end
 
-
     end
   end
 end

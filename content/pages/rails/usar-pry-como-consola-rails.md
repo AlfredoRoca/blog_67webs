@@ -17,4 +17,5 @@ Keywords: rails, documentos largos
 Además, incluir pry en el proyecto
 
     gem 'pry'
+    gem 'pry-rails'
 
