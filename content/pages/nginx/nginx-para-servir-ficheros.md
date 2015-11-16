@@ -1,9 +1,10 @@
-Description: X-Accel-Mapping header missing
+Description: Configurar nginx para servir ficheros rails y evitar el error X-Accel-Mapping header missing
 Date: 15/11/2015
 Categories: nginx, rails
 Summary: Servir los assets y los uploads de rails mediante nginx
+Keywords: nginx, x-accel-mapping, rails
 
-#Configurar nginx para servir ficheros rails
+#Configurar nginx para servir ficheros rails y evitar el error X-Accel-Mapping header missing
 
 Lo que he hecho yo es lo siguiente:
 

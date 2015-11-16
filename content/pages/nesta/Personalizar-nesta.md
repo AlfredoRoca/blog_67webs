@@ -2,9 +2,9 @@ Description: Cómo personalizar las vistas de Nesta
 Date: 9/11/2015
 Categories: nesta
 Summary: Así es como yo he personalizado mi blog.
+Keywords: nestacms, personalizar, vistas
 
-
-#Personalización de las vistas
+#Cómo personalizar las vistas de NestaCMS
 
 Fuente: <http://nestacms.com/docs/design/editing-default-templates>
 

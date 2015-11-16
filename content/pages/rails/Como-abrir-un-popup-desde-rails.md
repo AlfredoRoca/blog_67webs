@@ -2,6 +2,7 @@ Description: Cómo abrir un popup desde rails
 Date: 15/11/2015
 Categories: rails
 Summary: Una de las formas de dar notificaciones al usuario es mediante ventanas emergentes. Aquí explico cómo lo he hecho yo usando las ventanas modales de Bootstrap
+Keywords: rails, popup
 
 #Cómo abrir un popup desde rails
 

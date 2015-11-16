@@ -1,9 +1,10 @@
-Description: Como validar modelos en Rails condicionalmente
+Description: Como validar condicionalmente modelos en Rails
 Date: 7/11/2014
 Categories: rails
 Summary: Validar registros según convenga
+Keywords: rails, validacion condicional modelos
 
-#Cómo validar campos del perfil de usuario sólo al actualizar, no al crear el usuario
+#Como validar condicionalmente modelos en Rails
 
 ##Escenario:
 

@@ -2,8 +2,9 @@ Description: Cómo crear un efecto de biselado en botones con CSS
 Date: 1/11/2015
 Categories: css
 Summary: Un toque de estilo para tus botones ...
+Keywords: css, biselado
 
-#Efecto biselado en botones con CSS
+#Cómo crear un efecto de biselado en botones con CSS
 
     :::sass
     .biselado {
