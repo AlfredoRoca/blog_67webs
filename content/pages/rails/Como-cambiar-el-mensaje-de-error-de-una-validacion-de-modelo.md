@@ -36,3 +36,4 @@ Para otras validaciones, las palabras clave son:
 - validates_length_of keyword      ->  too_short o too_long
 - validates_uniqueness_of keyword  ->  taken
 
+Fuente: <http://guides.rubyonrails.org/i18n.html#translations-for-active-record-models>
