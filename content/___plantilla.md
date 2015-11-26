@@ -12,3 +12,12 @@ si se crea una categoría nueva:
 - guardar en subdirectorio correspondiente
 - incluir en el menu.txt
 
+
+
+
+Para publicación:
+
+git add .
+git commit "new post"
+git push origin master
+cap staging deploy

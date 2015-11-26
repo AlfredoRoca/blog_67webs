@@ -1,4 +1,4 @@
-Description: Como cambiar el mensaje de error de una validacion de modelo
+Description: Como cambiar el mensaje de error de una validación de modelo
 Date: 26/11/2015
 Categories: rails, active_record
 Summary: Se puede personalizar el mensaje de error de una validación para hacerlo más humano.
