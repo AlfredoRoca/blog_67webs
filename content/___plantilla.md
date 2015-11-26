@@ -8,7 +8,7 @@ Flags: draft
 #aquí el título del post
 
 si se crea una categoría nueva:
-- añadir página haml correspondietne con su titulo genérico
+- añadir página haml correspondiente con su título genérico
 - guardar en subdirectorio correspondiente
 - incluir en el menu.txt
 
