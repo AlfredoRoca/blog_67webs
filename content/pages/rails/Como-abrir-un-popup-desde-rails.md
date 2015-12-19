@@ -32,11 +32,6 @@ _popup_con_mensaje.html.erb
     </div>
 
 
-En la acción del controlador que debe abrir el popup
-
-    render :popup_con_mensaje
-
-
 En bootstrap-sprockets.js
 
     //= require ./bootstrap/modal
