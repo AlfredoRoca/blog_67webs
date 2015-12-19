@@ -13,7 +13,7 @@
         %header
           %h1= articles_heading
         = article_summaries(@page.articles)
-
+    %hr
     = haml :page_meta, :layout => false, :locals => { :page => @page }
 
   = haml :comments, :layout => false
