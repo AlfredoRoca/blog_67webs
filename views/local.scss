@@ -1,4 +1,3 @@
-
 ol.archive {
     list-style: none;
 }
@@ -21,3 +20,19 @@ nav.archive ol {
   width: 100%;
 }
 
+
+.bio {
+  img {
+  border: 1px solid rgb(238, 221, 221);
+  box-shadow: 5px 6px 12px rgb(206, 202, 202);
+  margin-left: 1em; 
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+  }
+  tbody {
+    vertical-align: middle;
+  }
+}

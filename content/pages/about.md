@@ -14,3 +14,20 @@ Ahora trabajo como freelance. Si crees que puedo colaborar en tu trabajo o resol
 
 [Mi portafolio en 67webs.com](http://67webs.com)
 
+<hr>
+<table class="bio">
+  <tbody>
+    <td>
+      <img src="/images/alfredo.png" alt="Alfredo">
+    </td>
+    <td>
+      <ul>
+        <li>Desarrollador web full-stack con RubyOnRails</li>
+        <li>Ingeniero Técnico Industrial</li>
+        <li>Larga experiencia en Automatización Industrial con PLCs y SCADAs</li>
+        <li>Padi Advanced Open Water diver</li>
+        <li>Jugué al baloncesto y me gusta nadar</li>
+      </ul>
+    </td>
+  </tbody>
+</table>
