@@ -4,8 +4,7 @@ Categories: rails, active_record
 Summary: Se puede personalizar el mensaje de error de una validación para hacerlo más humano.
 Keywords: rails, active record, validación, mensaje de error
 
-#Como cambiar el mensaje de error de una validacion de modelo
-
+#Como cambiar el mensaje de error de una validación de modelo
 
 Supongamos que la validación se hace con la siguiente línea:
 
