@@ -22,4 +22,3 @@ gem "nesta-plugin-foldable"
 
 # app server
 gem 'thin'
-
