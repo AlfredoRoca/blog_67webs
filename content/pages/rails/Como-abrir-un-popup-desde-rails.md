@@ -19,17 +19,30 @@ _popup_con_mensaje.html.erb
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel"><%= t(:Modal_title) %></h4>
+            <h4 class="modal-title" id="myModalLabel">TITULO VENTANA</h4>
           </div>
           <div class="modal-body">
-            <h4><%= t(:Modal_message) %></h4>
+            <h4>MENSAJE</h4>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><%= t(:Close_modal) %></button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">CERRAR</button>
           </div>
         </div>
       </div>
     </div>
+
+
+show_popup.js.erb
+
+    $('#myModal').modal('show')
+
+En la acción del controllador
+
+    render :show_popup
+
+Desde la propia vista
+
+    <%= link_to ...., onclick: "$('#myModal').modal('show');" ...
 
 
 En bootstrap-sprockets.js
