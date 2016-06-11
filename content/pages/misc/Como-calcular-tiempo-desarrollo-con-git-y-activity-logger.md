@@ -14,6 +14,11 @@ Sobre Git Tagging: <https://git-scm.com/book/en/v2/Git-Basics-Tagging>
 
 Sobre Git Log: <https://git-scm.com/docs/git-log>
 
+##Comando git para listar los tags con la fecha
+
+    git log --graph --tags --date-order --simplify-by-decoration  --decorate --oneline --pretty=format:"%h %ai %d %s" | grep tag:
+
+
 ##Un helper para calcular la duración en 'h'##
 
     #application_helper.rb
@@ -159,11 +164,6 @@ Sobre Git Log: <https://git-scm.com/docs/git-log>
 
 
 ##Aplicación simple para generar un historial git suficiente y comprobar listado de git tags##
-
-TL;DR
-
-    git log --graph --tags --date-order --simplify-by-decoration  --decorate --oneline --pretty=format:"%h %ai %d %s" | grep tag
-
 
 bash alias for git commands:
 
