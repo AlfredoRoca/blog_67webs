@@ -2,8 +2,7 @@ Description: Cálculo de tiempos de actividad entre Git Tags con ActivityLogger
 Date: 11/6/2016
 Categories: misc
 Summary:
-Keywords: 
-Flags: draft
+Keywords: git tag
 
 En este post explico cómo he añadido está funcionalidad a mi programa ActivityLogger para calcular el tiempo dedicado en horas al desarrollo de nuevas funciones de cualquier proyecto.
 Se asume que se usa git para el control de versiones y se marca con tags los diferentes avances en la aplicación.
@@ -11,6 +10,9 @@ Lo que hace el programa es sumar todas las actividades del proyecto entre las fe
 
 #Cálculo de tiempos de actividad entre Git Tags con ActivityLogger
 
+Sobre Git Tagging: <https://git-scm.com/book/en/v2/Git-Basics-Tagging>
+
+Sobre Git Log: <https://git-scm.com/docs/git-log>
 
 ##Un helper para calcular la duración en 'h'##
 
@@ -163,98 +165,68 @@ bash alias for git commands:
     gac = git add . & git commit -m %1
     glb = git log --oneline --decorate --graph -all
 
-mkdir sample
-cd sample
-git init
-touch index.txt
-gac "1st commit"
+La aplicación dummy
 
-    [master (root-commit) 9fa9860] 1st commit
-     1 file changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 index.txt
+    mkdir sample
+    cd sample
+    git init
+    touch index.txt
+    gac "1st commit"
+    vi index.txt 
+    gac "implements feature 1 on master branch directly"
+    git tag v0.1
 
-glb
-    
-    * 9fa9860 (HEAD, master) 1st commit
+    touch feature-2
+    gac "implements feature 2 in master branch"
+    git tag v0.2
 
-vi index.txt 
-gac "implements feature 1 on master branch directly"
+    git checkout -b feature-3
+    touch feature-3
+    gac "feature-3 in branch feature-3"
+    git checkout master
+    git merge --no-ff feature-3 
+    git tag v0.3 
+    glb
 
-    [master 46f4816] implements feature 1 on master branch directly
-     1 file changed, 2 insertions(+)
+        *   5027673 (HEAD, tag: v0.3, master) Merge branch 'feature-3'
+        |\  
+        | * e5a57c5 (feature-3) feature-3 in branch feature-3
+        |/  
+        * c8860e5 (tag: v0.2) implements feature 2 in master branch
+        * 46f4816 (tag: v0.1) implements feature 1 on master branch directly
+        * 9fa9860 1st commit
 
-glb
+    touch bug-1
+    gac "fixes bug 1"
 
-    * 46f4816 (HEAD, master) implements feature 1 on master branch directly
-    * 9fa9860 1st commit
+    git tag v0.4
+    git log --graph --tags --date-order --pretty=format:"%h %ai %d %s"
 
-git tag v0.1
-glb
+        * 05e5dd9 2016-06-11 12:38:06 +0200  (HEAD, tag: v0.4, master) fixes bug 1
+        *   5027673 2016-06-11 12:36:49 +0200  (tag: v0.3) Merge branch 'feature-3'
+        |\  
+        | * e5a57c5 2016-06-11 12:31:55 +0200  (feature-3) feature-3 in branch feature-3
+        |/  
+        * c8860e5 2016-06-11 12:29:55 +0200  (tag: v0.2) implements feature 2 in master branch
+        * 46f4816 2016-06-11 12:28:45 +0200  (tag: v0.1) implements feature 1 on master branch directly
+        * 9fa9860 2016-06-11 12:27:56 +0200  1st commit
 
-    * 46f4816 (HEAD, tag: v0.1, master) implements feature 1 on master branch directly
-    * 9fa9860 1st commit
+    git log --graph --tags --date-order --simplify-by-decoration --pretty=format:"%h %ai %d %s"
 
-touch feature-2
-gac "implements feature 2 in master branch"
-git tag v0.2
+        * 05e5dd9 2016-06-11 12:38:06 +0200  (HEAD, tag: v0.4, master) fixes bug 1
+        * 5027673 2016-06-11 12:36:49 +0200  (tag: v0.3) Merge branch 'feature-3'
+        * e5a57c5 2016-06-11 12:31:55 +0200  (feature-3) feature-3 in branch feature-3
+        * c8860e5 2016-06-11 12:29:55 +0200  (tag: v0.2) implements feature 2 in master branch
+        * 46f4816 2016-06-11 12:28:45 +0200  (tag: v0.1) implements feature 1 on master branch directly
+        * 9fa9860 2016-06-11 12:27:56 +0200  1st commit
 
-git checkout -b feature-3
-touch feature-3
-gac "feature-3 in branch feature-3"
-git checkout master
-git merge --no-ff feature-3 
-git tag v0.3 
-glb
+    git log --graph --tags --date-order --simplify-by-decoration  --decorate --oneline --pretty=format:"%h %ai %d %s" | grep tag:
 
-    *   5027673 (HEAD, tag: v0.3, master) Merge branch 'feature-3'
-    |\  
-    | * e5a57c5 (feature-3) feature-3 in branch feature-3
-    |/  
-    * c8860e5 (tag: v0.2) implements feature 2 in master branch
-    * 46f4816 (tag: v0.1) implements feature 1 on master branch directly
-    * 9fa9860 1st commit
+        * 05e5dd9 2016-06-11 12:38:06 +0200  (HEAD, tag: v0.4, master) fixes bug 1
+        * 5027673 2016-06-11 12:36:49 +0200  (tag: v0.3) Merge branch 'feature-3'
+        * c8860e5 2016-06-11 12:29:55 +0200  (tag: v0.2) implements feature 2 in master branch
+        * 46f4816 2016-06-11 12:28:45 +0200  (tag: v0.1) implements feature 1 on master branch directly
 
-touch bug-1
-gac "fixes bug 1"
-glb
-
-    * 05e5dd9 (HEAD, master) fixes bug 1
-    *   5027673 (tag: v0.3) Merge branch 'feature-3'
-    |\  
-    | * e5a57c5 (feature-3) feature-3 in branch feature-3
-    |/  
-    * c8860e5 (tag: v0.2) implements feature 2 in master branch
-    * 46f4816 (tag: v0.1) implements feature 1 on master branch directly
-    * 9fa9860 1st commit
-
-git tag v0.4
-git log --graph --tags --date-order --pretty=format:"%h %ai %d %s"
-
-    * 05e5dd9 2016-06-11 12:38:06 +0200  (HEAD, tag: v0.4, master) fixes bug 1
-    *   5027673 2016-06-11 12:36:49 +0200  (tag: v0.3) Merge branch 'feature-3'
-    |\  
-    | * e5a57c5 2016-06-11 12:31:55 +0200  (feature-3) feature-3 in branch feature-3
-    |/  
-    * c8860e5 2016-06-11 12:29:55 +0200  (tag: v0.2) implements feature 2 in master branch
-    * 46f4816 2016-06-11 12:28:45 +0200  (tag: v0.1) implements feature 1 on master branch directly
-    * 9fa9860 2016-06-11 12:27:56 +0200  1st commit
-
-git log --graph --tags --date-order --simplify-by-decoration --pretty=format:"%h %ai %d %s"
-
-    * 05e5dd9 2016-06-11 12:38:06 +0200  (HEAD, tag: v0.4, master) fixes bug 1
-    * 5027673 2016-06-11 12:36:49 +0200  (tag: v0.3) Merge branch 'feature-3'
-    * e5a57c5 2016-06-11 12:31:55 +0200  (feature-3) feature-3 in branch feature-3
-    * c8860e5 2016-06-11 12:29:55 +0200  (tag: v0.2) implements feature 2 in master branch
-    * 46f4816 2016-06-11 12:28:45 +0200  (tag: v0.1) implements feature 1 on master branch directly
-    * 9fa9860 2016-06-11 12:27:56 +0200  1st commit
-
-git log --graph --tags --date-order --simplify-by-decoration  --decorate --oneline --pretty=format:"%h %ai %d %s" | grep tag
-
-    * 05e5dd9 2016-06-11 12:38:06 +0200  (HEAD, tag: v0.4, master) fixes bug 1
-    * 5027673 2016-06-11 12:36:49 +0200  (tag: v0.3) Merge branch 'feature-3'
-    * c8860e5 2016-06-11 12:29:55 +0200  (tag: v0.2) implements feature 2 in master branch
-    * 46f4816 2016-06-11 12:28:45 +0200  (tag: v0.1) implements feature 1 on master branch directly
-
-Ya tenemos el listado de tags con sus fechas
+Ya tenemos el listado de tags con sus fechas para introducir en ActivityLogger.
 
 
