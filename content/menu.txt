@@ -7,3 +7,4 @@ nesta
 nginx
 git
 active_record
+misc
