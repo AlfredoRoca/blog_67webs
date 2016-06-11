@@ -160,6 +160,11 @@ Sobre Git Log: <https://git-scm.com/docs/git-log>
 
 ##Aplicación simple para generar un historial git suficiente y comprobar listado de git tags##
 
+TL;DR
+
+    git log --graph --tags --date-order --simplify-by-decoration  --decorate --oneline --pretty=format:"%h %ai %d %s" | grep tag
+
+
 bash alias for git commands:
 
     gac = git add . & git commit -m %1
