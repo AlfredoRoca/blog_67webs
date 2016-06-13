@@ -29,7 +29,7 @@ Como root, editar la tabla cron.
     [root@server-1 /]# crontab -e
 
     30 01 * * * /home/username/backups/pg_backup_rotated.sh -c /home/username/backups/pg_backup.config
-    31 01 * * * tar -zcvf /home/username/backups/nmp_docs.tar.gz /var/www/nomaspapeles/shared/public/uploads/*
+    31 01 * * * tar -zcvf /home/username/backups/files.tar.gz /var/www/nomaspapeles/shared/public/uploads/*
     32 01 * * * rsync -avzhe 'ssh -i /home/username/.ssh/id_rsa -p PORT' /home/username/backups/* username@remote_server_IP:/home/username/backups/
 
 Para hacerlo 3 veces al día sólo es necesaario repetir las 3 líneas a horas diferentes.
@@ -37,5 +37,5 @@ Para hacerlo 3 veces al día sólo es necesaario repetir las 3 líneas a horas d
 Si se desea conservar las 3 copias en el servidor remoto entonces transferir a directorios diferentes. Por ejemplo
 
     30 09 * * * /home/username/backups/pg_backup_rotated.sh -c /home/username/backups/pg_backup.config
-    31 09 * * * tar -zcvf /home/username/backups/nmp_docs.tar.gz /var/www/nomaspapeles/shared/public/uploads/*
+    31 09 * * * tar -zcvf /home/username/backups/files.tar.gz /var/www/nomaspapeles/shared/public/uploads/*
     32 09 * * * rsync -avzhe 'ssh -i /home/username/.ssh/id_rsa -p PORT' /home/username/backups/* username@remote_server_IP:/home/username/backups/a_las_nueve_y_media
