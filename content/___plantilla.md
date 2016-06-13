@@ -1,4 +1,4 @@
-Description: aquí el titulo del post (meta tag página y pestaña navegador)
+Description: 
 Date: /6/2016
 Categories: 
 Summary:
@@ -12,6 +12,8 @@ si se crea una categoría nueva:
 - guardar en subdirectorio correspondiente
 - incluir en el menu.txt
 
+Description -> aquí el titulo del post (meta tag página y pestaña navegador)
+Summary -> resumen que aparece en vista general
 
 
 

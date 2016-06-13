@@ -1,7 +1,7 @@
 Description: Como realizar 3 backups diarios y copiar en otro servidor
 Date: 13/6/2016
 Categories: misc
-Summary:
+Summary: Realizar backups diarios de las bases de datos de PostgreSQL y ficheros subidos a la aplicación y copiarlos en otro servidor es muy sencillo. En este post explico cómo yo lo he hecho usando pgdump, tar y rsync.
 Keywords: backup, postgres, uploads, rsync, ssh
 
 Realizar backups diarios de las bases de datos de PostgreSQL y ficheros subidos a la aplicación y copiarlos en otro servidor es muy sencillo. En este post explico cómo yo lo he hecho usando pgdump, tar y rsync.

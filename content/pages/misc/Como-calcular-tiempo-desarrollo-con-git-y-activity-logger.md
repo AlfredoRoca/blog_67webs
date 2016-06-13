@@ -1,7 +1,7 @@
 Description: Cálculo de tiempos de actividad entre Git Tags con ActivityLogger
 Date: 11/6/2016
 Categories: misc
-Summary:
+Summary: En este post explico cómo he añadido está funcionalidad a mi programa ActivityLogger para calcular el tiempo dedicado en horas al desarrollo de nuevas funciones de cualquier proyecto.
 Keywords: git tag
 
 En este post explico cómo he añadido está funcionalidad a mi programa ActivityLogger para calcular el tiempo dedicado en horas al desarrollo de nuevas funciones de cualquier proyecto.
