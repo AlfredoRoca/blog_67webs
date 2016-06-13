@@ -18,7 +18,7 @@ Ahora trabajo como freelance. Si crees que puedo colaborar en tu trabajo o resol
 <table class="bio">
   <tbody>
     <td>
-      <img src="/images/alfredo.png" alt="Alfredo">
+      <img src="/images/alfredo.jpg" alt="Alfredo">
     </td>
     <td>
       <ul>
