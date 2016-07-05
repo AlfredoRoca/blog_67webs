@@ -32,7 +32,7 @@ El plugin `webroot` permite crear y renovar el certificado sin parar Nginx. Ver 
 
     certbot-auto certonly --webroot -w /var/www/nomaspapeles/shared/public -d nomaspapeles.com -d www.nomaspapeles.com --email admin@example.com --agree-tos
 
-El plugin webroot crea un archivo temporal en `${webroot-path}/.well-known/acme-challenge`. webroot-path es el path del parámetro `-w`. Luego, el servidor de validación de Let’s Encrypt realiza petición HTTP para validar que el DNS del dominio de cada petición dirige al servidor ejecutando Certbot. Por eso, nginx debe permitir el acceso a ese directorio.
+El plugin webroot crea un archivo temporal en `${webroot-path}/.well-known/acme-challenge`. webroot-path es el path del parámetro `-w`. Luego, el servidor de validación de Let’s Encrypt realiza petición HTTP para validar que el DNS del dominio de cada petición dirige al servidor que está ejecutando Certbot. Por eso, nginx debe permitir el acceso a ese directorio.
 
 ##Configuración de Nginx
 
