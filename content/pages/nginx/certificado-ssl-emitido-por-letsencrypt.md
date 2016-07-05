@@ -26,27 +26,30 @@ En `/usr/local/bin`
 <https://certbot.eff.org/docs/using.html#command-line-options>
 
 
-El plugin `webroot` permite crear y renovar el certificado sin parar Nginx. 
+El plugin `webroot` permite crear y renovar el certificado sin parar Nginx. Ver info en <http://letsencrypt.readthedocs.io/en/latest/using.html#webroot>
 
 ##Crear el certificado SSL la primera vez 
 
     certbot-auto certonly --webroot -w /var/www/nomaspapeles/shared/public -d nomaspapeles.com -d www.nomaspapeles.com --email admin@example.com --agree-tos
 
+El plugin webroot crea un archivo temporal en ${webroot-path}/.well-known/acme-challenge. webroot-path es el path del parámetro -w. Luego, el servidor de validación de Let’s Encrypt realiza petición HTTP para validar que el DNS del dominio de cada petición dirige al servidor ejecutando Certbot. Por eso, nginx debe permitir el acceso a ese directorio.
+
 ##Configuración de Nginx
 
-server {
-....
+    server {
+    ....
 
         ssl on;
 
-#       certificate managed by letsencrypt
-#       See: https://letsencrypt.readthedocs.org/en/latest/using.html#renewal
+    # certificate managed by letsencrypt
+    # See: https://letsencrypt.readthedocs.org/en/latest/using.html#renewal
         ssl_certificate_key /etc/letsencrypt/live/nomaspapeles.com/privkey.pem;
         ssl_trusted_certificate /etc/letsencrypt/live/nomaspapeles.com/chain.pem;
         ssl_certificate /etc/letsencrypt/live/nomaspapeles.com/fullchain.pem;
 
 
         root         /var/www/nomaspapeles/shared/public;
+        # aqui, certbot crea directorio .well-known necesario para la validación del certificado.
 
         location ~ /.well-known/  {
                 allow all;
