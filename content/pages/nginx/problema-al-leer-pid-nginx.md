@@ -8,7 +8,10 @@ Keywords: nginx, pid
 #Cómo resolver el error en nginx 'Failed to read PID from file /run/nginx.pid: Invalid argument'
 
 
-El problema: Nginx parece que funciona pero reporta el error 'Failed to read PID from file /run/nginx.pid: Invalid argument'
+Nginx parece que funciona pero reporta el error 'Failed to read PID from file /run/nginx.pid: Invalid argument'
+
+Parece ser un tema entre systemd y nginx. Como si systemd esperase encontrar el archivo pero a nginx no le ha dado tiempo crearlo.
+
 
     [root@vps311327 ~]# systemctl status nginx
     ● nginx.service - The nginx HTTP and reverse proxy server
@@ -32,8 +35,6 @@ El problema: Nginx parece que funciona pero reporta el error 'Failed to read PID
 
 
 Posible solución:
-
-Parece ser un tema entre systemd y nginx. Como si systemd esperase encontrar el archivo pero a nginx no le ha dado tiempo crearlo.
 
     mkdir /etc/systemd/system/nginx.service.d
     printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
