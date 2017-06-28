@@ -8,7 +8,8 @@
       %meta(name="description" content=@description)
     - if @keywords
       %meta(name="keywords" content=@keywords)
-    %title= @title
+    / %title= @title
+    %title= "Recetas, apuntes, pistas y soluciones en desarrollo web. Ruby, Rails, CSS, JS, Linux, nginx, postgresql y otros temas."
     %link(href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css')
     <!--[if ! lte IE 6]><!-->
     %link(href="#{path_to('/css/master.css')}" rel="stylesheet")
@@ -21,6 +22,14 @@
     %script(src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js")
     %link(href="#{path_to('/articles.xml')}" rel="alternate" type="application/atom+xml")
     = haml :analytics, :layout => false
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/public/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
+    <link rel="manifest" href="/public/images/manifest.json">
+    <link rel="mask-icon" href="/public/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
   %body
     .header-image
     #container
