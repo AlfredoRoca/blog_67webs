@@ -6,11 +6,11 @@ Una de las grandes lecciones que he aprendido ya de adulto es que es necesario f
 
 El vasto campo del desarrollo web hace patente la aplicación de dicha lección.
 
-Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootcamp de [Ironhack](http://ironhack.com), un proyecto completo como [SharingKitchN](http://sharingkitchn.com) y mucha lectura de [StackOverflow](http://stackoverflow.com/) y numerosos blogs ha llegado el momento de materializar mi aprendizaje y empezar a contribuir por lo que he recibido.
+Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootcamp de [Ironhack](http://ironhack.com), un proyecto completo como [Sharing-Kitchen](https://sharing-kitchen.com) y mucha lectura de [StackOverflow](http://stackoverflow.com/) y numerosos blogs ha llegado el momento de materializar mi aprendizaje y empezar a contribuir por lo que he recibido. Y he decidido hacerlo en español.
 
 Este blog viene a ser la manera en que intentaré este propósito.
 
-Ahora trabajo como freelance. Si crees que puedo colaborar en tu trabajo o resolver algún problema puedes contactar  conmigo en 67webs gmail.com, [LinkedIn](https://es.linkedin.com/in/alfredorocamas) o [Twitter](https://twitter.com/AlfredoRocaMas)
+Ahora trabajo como freelance. Si crees que puedo colaborar en tu trabajo o resolver algún problema puedes contactar  conmigo en alfredo at 67webs dot com, [LinkedIn](https://es.linkedin.com/in/alfredorocamas) o [Twitter](https://twitter.com/AlfredoRocaMas)
 
 [Mi portafolio en 67webs.com](http://67webs.com)
 
