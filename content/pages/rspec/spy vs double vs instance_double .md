@@ -9,9 +9,9 @@ Flags:
 
 Si no es necesario usar validaciones o callbacks propias de los modelos basados en ActiveRecord puede crearse falsos objetos. 
 
-`spy`: crea un objeto que se devuelve a si mismo ante la llamada de cualquier método. Permite definir las respuestas a cualqueir método que se defina.
+`spy`: crea un objeto false que es devuelto ante la llamada de cualquier método. Permite definir las respuestas para cualqueir método.
 
-`double`: igual que `spy` pero dispara error si no se ha definido el método llamado.
+`double`: igual que `spy` pero dispara error si no se ha declarado previamente el método llamado.
 
 `instance_double`: igual que double pero sólo permite definir métodos que existan en la clase.
 
@@ -20,7 +20,7 @@ Ejemplos (sobre una aplicación Rails que tiene definida la clase User)
     2.4.0 :001 > require 'rspec/mocks/standalone'
      => false 
 
-Creación del `spy`
+##Creación del `spy`
 
     2.4.0 :002 > user_spy = spy(User, cualquier_cosa: 'eiii, hola')
      => #<Double User(id: integer, email: string, encrypted_password: string, reset_password_token: string, reset_password_sent_at: datetime, remember_created_at: datetime, sign_in_count: integer, current_sign_in_at: datetime, last_sign_in_at: datetime, current_sign_in_ip: inet, last_sign_in_ip: inet, created_at: datetime, updated_at: datetime, firstname: string, lastname: string, group_id: integer, deputy: boolean, tokens: json)> 
@@ -35,7 +35,7 @@ Llamada a un método no definido, devuelve el objeto
     2.4.0 :004 > user_spy.otra_cosa
      => #<Double User(id: integer, email: string, encrypted_password: string, reset_password_token: string, reset_password_sent_at: datetime, remember_created_at: datetime, sign_in_count: integer, current_sign_in_at: datetime, last_sign_in_at: datetime, current_sign_in_ip: inet, last_sign_in_ip: inet, created_at: datetime, updated_at: datetime, firstname: string, lastname: string, group_id: integer, deputy: boolean, tokens: json)> 
 
-Creación del `double`
+##Creación del `double`
 
     2.4.0 :005 > user_double = double(User, mi_metodo: "mi metodo")
      => #<Double User(id: integer, email: string, encrypted_password: string, reset_password_token: string, reset_password_sent_at: datetime, remember_created_at: datetime, sign_in_count: integer, current_sign_in_at: datetime, last_sign_in_at: datetime, current_sign_in_ip: inet, last_sign_in_ip: inet, created_at: datetime, updated_at: datetime, firstname: string, lastname: string, group_id: integer, deputy: boolean, tokens: json)> 
@@ -52,7 +52,7 @@ Llamada a un método no declarado, dispara error
         from (irb):7
 
 
-Creación del `instance_double` con un método declarado en la clase
+##Creación del `instance_double` con un método declarado en la clase
 
     2.4.0 :008 > user_verified = instance_double(User, fullname: "Leonardo da Vinci")
      => #<InstanceDouble(User) (anonymous)> 
@@ -68,7 +68,7 @@ Llamada a un método no declarado, dispara error
     RSpec::Mocks::MockExpectationError: #<InstanceDouble(User) (anonymous)> received unexpected message :otro_metodo with (no args)
         from (irb):10
 
-Creación del `instance_double` con un método NO declarado en la clase
+Creación del `instance_double` con un método NO declarado en la clase, dispara error
 
     2.4.0 :011 > user_verified = instance_double(User, name: "Leonardo da Vinci")
     RSpec::Mocks::MockExpectationError: the User class does not implement the instance method: name. Perhaps you meant to use `class_double` instead?
