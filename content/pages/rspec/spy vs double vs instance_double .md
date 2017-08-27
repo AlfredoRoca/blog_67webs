@@ -68,7 +68,7 @@ Llamada a un método no declarado, dispara error
     RSpec::Mocks::MockExpectationError: #<InstanceDouble(User) (anonymous)> received unexpected message :otro_metodo with (no args)
         from (irb):10
 
-Creación del `instance_double` con un método NO declarado en la clase, dispara error
+##Creación del `instance_double` con un método NO declarado en la clase, dispara error
 
     2.4.0 :011 > user_verified = instance_double(User, name: "Leonardo da Vinci")
     RSpec::Mocks::MockExpectationError: the User class does not implement the instance method: name. Perhaps you meant to use `class_double` instead?
