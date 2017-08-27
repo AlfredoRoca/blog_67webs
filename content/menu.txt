@@ -1,6 +1,7 @@
 /
 archives
 rails
+rspec
 css
 pry
 nesta
