@@ -74,7 +74,7 @@ Creación del `instance_double` con un método NO declarado en la clase, dispara
     RSpec::Mocks::MockExpectationError: the User class does not implement the instance method: name. Perhaps you meant to use `class_double` instead?
         from (irb):11
 
-Benchmarking:
+##Benchmarking:
 
     gem install benchmark-ips
 
@@ -118,7 +118,7 @@ Benchmarking:
       bm.compare!
     end
 
-Resultados:
+###Resultados:
 
     Warming up --------------------------------------
                      spy     3.063k i/100ms
@@ -141,13 +141,12 @@ Resultados:
          via factorygirl:     4713.3 i/s - 7.25x  slower
 
 
-Nota: como no he sabido usar devise en el script he simplifcado notablemente la clase User. Por eso la diferencia en rendimiento no es notable al usar objetos reales. 
+**Nota**: como no he sabido usar devise en el script he simplifcado notablemente la clase User. Por eso no hay mucha diferencia en rendimiento al crear objetos directamente en la base de datos.
 
-Conclusión:
+##Conclusión:
 
-Cualquiera de estas opciones es considerablemente más rápida que la creación de objectos reales (directa o con FactoryGirl).
+Cualquiera de estas opciones es más rápida que la creación de objectos en la base de datos creados directa o con FactoryGirl.
+
+Si no se requiere validaciones o callbacks vale la pena usar `doubles` o `instance_doubles`.
 
 Dentro de éstas, `instance_double` aporta mayor seguridad sin perjudicar mucho el rendimiento. En cualquier caso lo mejora respecto usar Factorygirl.
-
-
-
