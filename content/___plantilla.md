@@ -20,6 +20,6 @@ Summary -> resumen que aparece en vista general
 Para publicación:
 
 git add .
-git commit "new post"
+git commit -m "new post"
 git push origin master
 cap staging deploy
