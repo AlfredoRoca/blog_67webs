@@ -22,5 +22,3 @@ gem "nesta-plugin-foldable"
 
 # app server
 gem 'thin'
-
-gem 'benchmark-ips'
