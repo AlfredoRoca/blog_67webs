@@ -1,6 +1,6 @@
 Description: Checklists for Software Development
-Date: /9/2017
-Categories: 
+Date: 29/10/2017
+Categories: misc 
 Summary: Before submitting a pull request, when you are reviewing a PR & before deploying, ask yourself some questions.
 Keywords: 
 Flags: draft
