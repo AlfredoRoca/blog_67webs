@@ -2,6 +2,7 @@
 archives
 rails
 rspec
+postgresql
 css
 pry
 nesta
