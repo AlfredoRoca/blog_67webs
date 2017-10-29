@@ -8,7 +8,7 @@ Keywords: postgresql
 
 <https://github.com/dalibo/pgbadger>
 
-1. Install library `pg_stat_statements`
+1 Install library `pg_stat_statements`
 
     # postgresql.conf
     shared_preload_libraries = 'pg_stat_statements'
@@ -17,14 +17,14 @@ Keywords: postgresql
     pg_stat_statements.track = all
 
 
-2. Add extension to database
+2 Add extension to database
 
     psql -U <user> -d <database>
     # create extension pg_stat_statements;
 
-3. Install pgbadger as user with admin rights, in this example is `alfredo`
+3 Install pgbadger as user with admin rights, in this example is `alfredo`
 
-4. PostgreSQL configuration:
+4 PostgreSQL configuration:
 
     log_min_duration_statement = 200   # ===> carefull, log fast statements causes overhead
     log_checkpoints = on
@@ -46,17 +46,17 @@ Keywords: postgresql
     track_activity_query_size = 2048        # (change requires restart)
 
 
-5. Remove old log (or backup them)
+5 Remove old log (or backup them)
 
      rm /var/lib/pgsql/data/pg_log/*
 
-6. Restart service
+6 Restart service
 
     systemctl restart postgresql
 
-7. To run the analysis
+7 To run the analysis
 
-7.1. copy the log file to temp folder owned by working user (in this example is `alfredo`) and give him the property of the file
+7.1 copy the log file to temp folder owned by working user (in this example is `alfredo`) and give him the property of the file
 
     sudo cp /var/lib/pgsql/data/pg_log/postgresql-2017-08.log /tmp/
     sudo chown alfredo:alfredo /tmp/postgresql-2017-08.log
@@ -66,9 +66,9 @@ Keywords: postgresql
     cd /tmp
     pgbadger postgresql-2017-08.log
 
-8. copy the file to your local machine (from local)
+8 copy the file to your local machine (from local)
 
     scp alfredo@server:/tmp/out.html <destination-folder>
 
-9. Open the results file `out.html` with the browser
+9 Open the results file `out.html` with the browser
 
