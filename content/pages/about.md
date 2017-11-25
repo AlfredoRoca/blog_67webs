@@ -6,7 +6,7 @@ Una de las grandes lecciones que he aprendido ya de adulto es que es necesario f
 
 El vasto campo del desarrollo web hace patente la aplicación de dicha lección.
 
-Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootcamp de [Ironhack](http://ironhack.com), un proyecto completo como [Sharing-Kitchen](https://sharing-kitchen.com) y mucha lectura de [StackOverflow](http://stackoverflow.com/) y numerosos blogs ha llegado el momento de materializar mi aprendizaje y empezar a contribuir por lo que he recibido. Y he decidido hacerlo en español.
+Yo decidí especializarme en RubyOnRails. Gracias al empujón inicial del bootcamp de [Ironhack](http://ironhack.com), un proyecto completo como [Sharing-Kitchen](https://sharing-kitchen.com) y mucha lectura de [StackOverflow](http://stackoverflow.com/) y numerosos blogs ha llegado el momento de materializar mi aprendizaje y empezar a contribuir por lo que he recibido. Algunos artículos serán en castellano y otros en inglés.
 
 Este blog viene a ser la manera en que intentaré este propósito.
 
